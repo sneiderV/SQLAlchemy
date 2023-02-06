@@ -1,8 +1,8 @@
 # from src.modelo.cancion import Cancion
-from src.modelo.cancion import Cancion
-from src.modelo.interprete import Interprete
-from src.modelo.album import Album, Medio
-from src.modelo.declarative_base import Base, engine, Session
+from modelo.cancion import Cancion
+from modelo.interprete import Interprete
+from modelo.album import Album, Medio
+from modelo.declarative_base import Base, engine, Session
 
 if __name__ == '__main__':
     
@@ -22,6 +22,7 @@ if __name__ == '__main__':
     session.add(i3)
     session.add(i4)
     session.commit()
+    print('Se agregan los interpretes')
 
     # Crear álbumes
     a1 = Album(titulo = "Latin Jazz Compilation", ano = 2021, descripcion = "Album original", medio = Medio.DISCO)
@@ -45,8 +46,8 @@ if __name__ == '__main__':
     c1.interpretes = [i1]
     c2.interpretes = [i2]
     c3.interpretes = [i3, i4]
-    session.commit()
 
+    print('Se agregan los datos y sus relaciones')
     session.commit()
     session.close()
 
