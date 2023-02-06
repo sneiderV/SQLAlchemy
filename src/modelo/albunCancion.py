@@ -7,12 +7,12 @@ class AlbumCancion(Base):
     # Attribute
     
     # Relations
-    album = Column(
+    album_id = Column(
         Integer, 
         ForeignKey('album.id'), 
         primary_key=True)
     
-    cancion = Column(
+    cancion_id = Column(
         Integer, 
         ForeignKey('cancion.id'), 
         primary_key=True)
