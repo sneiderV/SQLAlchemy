@@ -3,7 +3,10 @@ from modelo.declarative_base import Session
 from modelo.interprete import Interprete
 
 if __name__ == '__main__':
+  
+  # Abre la sesion
   session = Session()
+  
   cancion = session.query(Cancion).get(2)
   interprete = session.query(Interprete).get(4)
 
