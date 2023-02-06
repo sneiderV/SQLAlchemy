@@ -7,6 +7,7 @@ class Interprete(Base):
     # Attributes
     id = Column(Integer, primary_key=True)
     nombre = Column(String)
+    texto_curiosidades = Column(String)
 
     # Relations
     cancion = Column(Integer, ForeignKey('cancion.id'))

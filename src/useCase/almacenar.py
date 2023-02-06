@@ -1,5 +1,5 @@
 # from src.modelo.cancion import Cancion
-from SQLAlchemy.src.modelo.cancion import Cancion
+from src.modelo.cancion import Cancion
 from src.modelo.interprete import Interprete
 from src.modelo.album import Album, Medio
 from src.modelo.declarative_base import Base, engine, Session
